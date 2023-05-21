@@ -1,0 +1,132 @@
+html {
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Lato', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #eee;
+
+}
+
+.container__form {
+    margin: 4px 0;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.addNewTaskText {
+    padding: 1px 15px;
+    background-color: white;
+}
+
+.newTask {
+    padding: 5px;
+    font-size: 18px;
+    width: 80%;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    color: #333;
+    padding: 5px;
+    font-size: 18px;
+    border-bottom: 5px solid #eee;
+}
+
+.task--done {
+    text-decoration: line-through;
+}
+
+tasks__item--hidden {
+    display: none;
+}
+
+
+.buttonAddTask {
+    background-color: #007382;
+    color: #fff;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+}
+
+.buttonAddTask:hover {
+    background-color: hsl(187, 100%, 35%);
+}
+
+@media (max-width: 767px) {
+    .buttonAddTask {
+        flex-basis: 100%;
+    }
+    .newTask {
+        flex-basis: 100%;
+        margin-bottom: 6px;
+    }
+}
+
+.buttonDone {
+    font-size: 18px;
+    background-color: #00741d;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-right: 10px;
+    
+}
+
+.buttonDone:hover {
+    background-color: hsl(135, 100%, 33%);
+}
+
+.buttonDone:active {
+    transform: scale(0.8);
+}
+
+.buttonRemove {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(255, 28, 47);
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    border: none;
+}
+
+.buttonRemove:hover {
+    background-color: hsl(355, 100%, 75%);
+}
+
+.buttonRemove:active {
+    transform: scale(0.8);
+}
+
+.taskPlace__list {
+    background-color: white;
+    padding: 20px;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+.section__button {
+    border: none;
+    color: hsl(180, 100%, 25%);
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto auto;
+}
